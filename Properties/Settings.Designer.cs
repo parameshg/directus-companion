@@ -62,48 +62,24 @@ namespace DirectusCompanion.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SourceUrl {
+        public string Url {
             get {
-                return ((string)(this["SourceUrl"]));
+                return ((string)(this["Url"]));
             }
             set {
-                this["SourceUrl"] = value;
+                this["Url"] = value;
             }
         }
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string SourceToken {
+        public string Token {
             get {
-                return ((string)(this["SourceToken"]));
+                return ((string)(this["Token"]));
             }
             set {
-                this["SourceToken"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string TargetUrl {
-            get {
-                return ((string)(this["TargetUrl"]));
-            }
-            set {
-                this["TargetUrl"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("")]
-        public string TargetToken {
-            get {
-                return ((string)(this["TargetToken"]));
-            }
-            set {
-                this["TargetToken"] = value;
+                this["Token"] = value;
             }
         }
     }

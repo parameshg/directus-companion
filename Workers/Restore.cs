@@ -11,7 +11,16 @@ namespace DirectusCompanion.Workers
 
         protected override void OnDoWork(DoWorkEventArgs e)
         {
-            base.OnDoWork(e);
+            ReportProgress(0, "Restoring Directus schema...");
+
+            var snapshot = File.ReadAllText("snapshot.json");
+
+            if (!string.IsNullOrWhiteSpace(snapshot))
+            {
+                Directus.ApplySnapshot(snapshot);
+            }
+
+            ReportProgress(100, "Schema restore completed!");
         }
     }
 }

@@ -1,3 +1,4 @@
+using DirectusCompanion.Models;
 using DirectusCompanion.Properties;
 using DirectusCompanion.Workers;
 using System.ComponentModel;
@@ -29,10 +30,8 @@ namespace DirectusCompanion
                     Username = Settings.Default.Username,
                     Password = Settings.Default.Password,
                     Folder = Settings.Default.Folder,
-                    SourceUrl = Settings.Default.SourceUrl,
-                    SourceToken = Settings.Default.SourceToken,
-                    TargetUrl = Settings.Default.TargetUrl,
-                    TargetToken = Settings.Default.TargetToken
+                    Url = Settings.Default.Url,
+                    Token = Settings.Default.Token
                 }
             };
 
@@ -45,10 +44,8 @@ namespace DirectusCompanion
                     Settings.Default.Username = configuration.Username;
                     Settings.Default.Password = configuration.Password;
                     Settings.Default.Folder = configuration.Folder;
-                    Settings.Default.SourceUrl = configuration.SourceUrl;
-                    Settings.Default.SourceToken = configuration.SourceToken;
-                    Settings.Default.TargetUrl = configuration.TargetUrl;
-                    Settings.Default.TargetToken = configuration.TargetToken;
+                    Settings.Default.Url = configuration.Url;
+                    Settings.Default.Token = configuration.Token;
 
                     Settings.Default.Save();
                 }

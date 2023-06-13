@@ -1,26 +1,17 @@
 ﻿using System.ComponentModel;
 
-namespace DirectusCompanion
+namespace DirectusCompanion.Models
 {
     internal class Configuration
     {
-        [Category("Source")]
+        [Category("Directus")]
         [DisplayName("URL")]
-        public string SourceUrl { get; set; }
+        public string Url { get; set; }
 
-        [Category("Source")]
+        [Category("Directus")]
         [DisplayName("Token")]
         [PasswordPropertyText(true)]
-        public string SourceToken { get; set; }
-
-        [Category("Target")]
-        [DisplayName("URL")]
-        public string TargetUrl { get; set; }
-
-        [Category("Target")]
-        [DisplayName("Token")]
-        [PasswordPropertyText(true)]
-        public string TargetToken { get; set; }
+        public string Token { get; set; }
 
         [Category("AWS")]
         [DisplayName("Access Key ID")]

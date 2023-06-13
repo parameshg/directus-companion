@@ -9,9 +9,18 @@ namespace DirectusCompanion.Workers
             WorkerReportsProgress = true;
         }
 
-        protected override void OnDoWork(DoWorkEventArgs e)
+        protected override void OnDoWork(DoWorkEventArgs args)
         {
-            base.OnDoWork(e);
+            ReportProgress(0, "Backing up Directus schema...");
+
+            var snapshot = Directus.GetSnapshot().GetAwaiter().GetResult();
+
+            if (!string.IsNullOrWhiteSpace(snapshot))
+            {
+                File.WriteAllText("snapshot.json", snapshot);
+            }
+
+            ReportProgress(100, "Schema backup completed!");
         }
     }
 }

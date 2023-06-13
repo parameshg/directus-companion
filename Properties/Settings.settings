@@ -11,16 +11,10 @@
     <Setting Name="Folder" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SourceUrl" Type="System.String" Scope="User">
+    <Setting Name="Url" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
-    <Setting Name="SourceToken" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="TargetUrl" Type="System.String" Scope="User">
-      <Value Profile="(Default)" />
-    </Setting>
-    <Setting Name="TargetToken" Type="System.String" Scope="User">
+    <Setting Name="Token" Type="System.String" Scope="User">
       <Value Profile="(Default)" />
     </Setting>
   </Settings>
