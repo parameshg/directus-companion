@@ -185,24 +185,24 @@
             // 
             TrayMenu.Items.AddRange(new ToolStripItem[] { tsmiShow, Seperator, tsmiExit });
             TrayMenu.Name = "TrayMenu";
-            TrayMenu.Size = new Size(141, 54);
+            TrayMenu.Size = new Size(181, 76);
             // 
             // tsmiShow
             // 
             tsmiShow.Name = "tsmiShow";
-            tsmiShow.Size = new Size(140, 22);
-            tsmiShow.Text = "Show Dialog";
+            tsmiShow.Size = new Size(180, 22);
+            tsmiShow.Text = "Show Window";
             tsmiShow.Click += OnShow;
             // 
             // Seperator
             // 
             Seperator.Name = "Seperator";
-            Seperator.Size = new Size(137, 6);
+            Seperator.Size = new Size(177, 6);
             // 
             // tsmiExit
             // 
             tsmiExit.Name = "tsmiExit";
-            tsmiExit.Size = new Size(140, 22);
+            tsmiExit.Size = new Size(180, 22);
             tsmiExit.Text = "Exit";
             tsmiExit.Click += OnExit;
             // 

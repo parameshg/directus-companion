@@ -1,6 +1,7 @@
 using Directus.Companion.Models;
 using Directus.Companion.Properties;
 using Directus.Companion.Workers;
+using Microsoft.Win32;
 using System.ComponentModel;
 
 namespace Directus.Companion
@@ -32,7 +33,8 @@ namespace Directus.Companion
                     Region = Settings.Default.Region,
                     Folder = Settings.Default.Folder,
                     Url = Settings.Default.Url,
-                    Token = Settings.Default.Token
+                    Token = Settings.Default.Token,
+                    AutoStart = Settings.Default.AutoStart
                 }
             };
 
@@ -48,9 +50,19 @@ namespace Directus.Companion
                     Settings.Default.Folder = configuration.Folder;
                     Settings.Default.Url = configuration.Url;
                     Settings.Default.Token = configuration.Token;
+                    Settings.Default.AutoStart = configuration.AutoStart;
 
                     Settings.Default.Save();
                 }
+            }
+
+            if (Settings.Default.AutoStart)
+            {
+                Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true)?.SetValue("Directus Companion", $"\"{Application.ExecutablePath}\"");
+            }
+            else
+            {
+                Registry.CurrentUser.OpenSubKey(@"SOFTWARE\Microsoft\Windows\CurrentVersion\Run", true)?.DeleteValue("Directus Companion", false);
             }
         }
 
@@ -99,7 +111,7 @@ namespace Directus.Companion
         {
             Status.Text = e.UserState as string;
 
-            Status.ForeColor = Status.Text.Contains("Error")  ? Color.Red : Color.Black;
+            Status.ForeColor = Status.Text.Contains("Error") ? Color.Red : Color.Black;
 
             Progress.Minimum = 0;
 

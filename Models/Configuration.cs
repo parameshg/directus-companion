@@ -4,6 +4,11 @@ namespace Directus.Companion.Models
 {
     internal class Configuration
     {
+        [Category("General")]
+        [DisplayName("Auto Start")]
+        [Description("Start at Windows login")]
+        public bool AutoStart { get; set; }
+
         [Category("Directus")]
         [DisplayName("URL")]
         [Description("Directus Base URL")]
