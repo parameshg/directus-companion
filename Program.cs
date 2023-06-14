@@ -1,4 +1,4 @@
-namespace DirectusCompanion
+namespace Directus.Companion
 {
     internal static class Program
     {

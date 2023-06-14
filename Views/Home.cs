@@ -1,9 +1,9 @@
-using DirectusCompanion.Models;
-using DirectusCompanion.Properties;
-using DirectusCompanion.Workers;
+using Directus.Companion.Models;
+using Directus.Companion.Properties;
+using Directus.Companion.Workers;
 using System.ComponentModel;
 
-namespace DirectusCompanion
+namespace Directus.Companion
 {
     public partial class Home : Form
     {
@@ -29,6 +29,7 @@ namespace DirectusCompanion
                 {
                     Username = Settings.Default.Username,
                     Password = Settings.Default.Password,
+                    Region = Settings.Default.Region,
                     Folder = Settings.Default.Folder,
                     Url = Settings.Default.Url,
                     Token = Settings.Default.Token
@@ -43,6 +44,7 @@ namespace DirectusCompanion
                 {
                     Settings.Default.Username = configuration.Username;
                     Settings.Default.Password = configuration.Password;
+                    Settings.Default.Region = configuration.Region;
                     Settings.Default.Folder = configuration.Folder;
                     Settings.Default.Url = configuration.Url;
                     Settings.Default.Token = configuration.Token;
@@ -96,6 +98,8 @@ namespace DirectusCompanion
         private void OnProgress(object? sender, ProgressChangedEventArgs e)
         {
             Status.Text = e.UserState as string;
+
+            Status.ForeColor = Status.Text.Contains("Error")  ? Color.Red : Color.Black;
 
             Progress.Minimum = 0;
 

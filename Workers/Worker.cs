@@ -1,10 +1,10 @@
-﻿using DirectusCompanion.Api;
-using DirectusCompanion.Properties;
+﻿using Directus.Companion.Api;
+using Directus.Companion.Properties;
 using Refit;
 using System.ComponentModel;
 using System.Net.Http.Headers;
 
-namespace DirectusCompanion.Workers
+namespace Directus.Companion.Workers
 {
     internal class Worker : BackgroundWorker
     {

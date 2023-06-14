@@ -1,4 +1,4 @@
-﻿namespace DirectusCompanion
+﻿namespace Directus.Companion
 {
     public partial class Property : Form
     {

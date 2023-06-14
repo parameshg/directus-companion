@@ -1,0 +1,7 @@
+{
+  "profiles": {
+    "Directus.Companion": {
+      "commandName": "Project"
+    }
+  }
+}

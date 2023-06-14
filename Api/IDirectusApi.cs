@@ -1,7 +1,7 @@
 ﻿using Microsoft.VisualBasic.ApplicationServices;
 using Refit;
 
-namespace DirectusCompanion.Api
+namespace Directus.Companion.Api
 {
     internal interface IDirectusApi
     {

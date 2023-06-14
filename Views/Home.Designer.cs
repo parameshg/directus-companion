@@ -1,4 +1,4 @@
-﻿namespace DirectusCompanion
+﻿namespace Directus.Companion
 {
     partial class Home
     {

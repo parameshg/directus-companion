@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace DirectusCompanion.Properties {
+namespace Directus.Companion.Properties {
     
     
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
@@ -80,6 +80,18 @@ namespace DirectusCompanion.Properties {
             }
             set {
                 this["Token"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string Region {
+            get {
+                return ((string)(this["Region"]));
+            }
+            set {
+                this["Region"] = value;
             }
         }
     }
